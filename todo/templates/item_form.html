@@ -12,12 +12,9 @@
 
     {% csrf_token %}
 
-    <label for="id_name">Name:</label><br>
-    <input type="text" id="id_name", name="name"><br>
-
-    <label for="id_done">Done:</label><br>
-    <input type="checkbox" id="id_done", name="done"><br>
-    <br>
+    <!-- variable called form below. Its passed into the views.py file -->
+    {{ form.as_p }}
+    
     <button type="submit">Save</button>
 
   </form>
