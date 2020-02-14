@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse, redirect
+from django.shortcuts import render, HttpResponse, redirect, get_object_or_404
 from .models import Item
 from .forms import ItemForm
 
@@ -28,3 +28,10 @@ def create_an_item(request):
     form = ItemForm()
 
   return render(request, 'item_form.html', {'form': form}) 
+
+def edit_an_item(request):
+  item = get_object_or_404(Item, pk=id)
+
+  return render(request, 'item_form.html', {'form': form}) 
+
+  # doing a git pull experiment. why? i updated a readme file remotely i.e github but not locally. but then when i had features updated locally that i wanted to push remotely it wouldnt allow me too until i sorted the readme file. i then inputted in the cmd terminal git push origin master --force. it worked. But its a bad practice because when you use --force you override anything so everything you overwritten is lost. by pulling them then pushing is the correct way as you preserve history

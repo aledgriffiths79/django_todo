@@ -17,6 +17,12 @@
       {% else %}
       <td>{{ item.name }}</td>
       {% endif %}
+
+      <td>
+        <!-- action value (edit) will be the url -->
+        <!-- each item will have an automatic id given by django -->
+        <form method="GET" action="edit/{{ item.id }}"><input type="submit" value="Edit"></form>
+      </td>
     </tr>
     {% empty %}
     <p>You have nothing to do.</p>
