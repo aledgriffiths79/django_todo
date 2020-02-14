@@ -1,0 +1,42 @@
+pip install django
+create a django project by typing :  django-admin startproject "name of project without '' . "  FOR EXAMPLE django-admin startproject django_todo .
+
+To expose the django project, u type in cmd terminal : python manage.py runserver
+
+URLS:
+type in cmd:
+              django-admin startapp todo
+
+in the urls.py file > urlpatterns = [(regularexpression)r'^name of app$', name of function in the views.py file]
+
+ADMIN: in command enter:
+1:  sqlite3 dbsqlite3
+2:  python manage.py migrate (we can run our migrations)
+3: .tables
+4: .quit
+5: select * from django_migrations;
+6:.header on then select * from django_migrations
+7:.mode column then select * from django_migrations
+
+8:python manage.py createsuperuser
+9:sqlite3 db.sqlite3/.tables/select * from auth_user;/.mode column/.headers on/select * from auth_user;
+line 9 will give a more readable environment to a table
+
+Lessons learnt for sqlite table. (to make the table more readable do the following):
+
+1:  sqlite3 dbsqlite3
+2:  .tables
+3:  select * from django_migrations;
+4:  .headers on
+5:  .mode column
+6:  select * from django_migrations;
+
+MODELS
+
+1:  python manage.py makemigrations (this cmd will make a file > create a new table in our database called todo_items)
+2:  sqlite3 dbsqlite3
+3:  .tables
+
+
+
+
