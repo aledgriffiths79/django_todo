@@ -29,8 +29,18 @@ def create_an_item(request):
 
   return render(request, 'item_form.html', {'form': form}) 
 
-def edit_an_item(request):
+def edit_an_item(request, id):
+  # i want to get the object from the item model and the specific 1 i want is the primary key pk with value equal to the id 
   item = get_object_or_404(Item, pk=id)
+  # saving the instance of this object
+
+  if request.method == 'POST':
+    form = ItemForm(request.POST, instance=item)
+    if form.is_valid():
+      form.save()
+      return redirect(get_todo_list)
+  else:
+    form = ItemForm(instance=item)
 
   return render(request, 'item_form.html', {'form': form}) 
 
