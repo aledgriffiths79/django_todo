@@ -1,0 +1,26 @@
+1:  What command do we need to run to create a new Django project?
+ANSWER: django-admin startproject .
+
+2:  What does the . signify in the startproject command?
+ANSWER: Create the project in this directory
+
+3:  Which of the following files are generated inside of an app directory by running the startapp command? (Select all that apply)
+ANSWER: dont know
+
+4:  What class did we extend in order to create the form?
+ANSWER: forms.ModelForm
+
+5:  The python3 manage.py migrate command will
+ANSWER: use the migration files to apply changes to a database
+
+
+
+
+
+
+
+
+
+
+
+
