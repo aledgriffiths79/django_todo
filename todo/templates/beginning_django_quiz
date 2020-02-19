@@ -5,7 +5,11 @@ ANSWER: django-admin startproject .
 ANSWER: Create the project in this directory
 
 3:  Which of the following files are generated inside of an app directory by running the startapp command? (Select all that apply)
-ANSWER: dont know
+ANSWER: 
+models.py
+__init__.py
+views.py
+admin.p
 
 4:  What class did we extend in order to create the form?
 ANSWER: forms.ModelForm
