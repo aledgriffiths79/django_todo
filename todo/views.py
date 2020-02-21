@@ -53,13 +53,3 @@ def toggle_status(request, id):
   item.save()
   return redirect(get_todo_list)
 
-
-
-
-
-
-
-
-
-
-

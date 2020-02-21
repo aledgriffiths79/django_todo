@@ -37,6 +37,17 @@ MODELS
 2:  sqlite3 dbsqlite3
 3:  .tables
 
+pip install coverage: how much of our code we have run/tested
 
+coverage cmd keys:
+1:  coverage run manage.py test
+2:  coverage report (but it does a test report on all of the python packages)
+3: for a specific directory i.e. todo i will input : coverage run --source=todo manage.py test
 
+if i do a test, i.e. in models.py file as when u conduct a test (coverage report) and its got 68% we need 100% testing results so when we do a test we then get the report up to see if its been updated, i.e. in cmd: coverage report
+
+IMPORTANT: for updates to coverage report (if u have "missing" in one of the files(this means u need testing whatever is indicated in red) once u do a test in one of the test.py files TO SEE the new coverage (updated coverage) in the cmd terminal u need to type
+
+1  coverage run --source=todo manage.py test
+2: coverage html then reload the page)
 
