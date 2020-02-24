@@ -51,3 +51,60 @@ IMPORTANT: for updates to coverage report (if u have "missing" in one of the fil
 1  coverage run --source=todo manage.py test
 2: coverage html then reload the page)
 
+Installing gunicorn: pip install gunicorn: what is it?
+ANSWER: This is the package that will be used to run the application on the server
+
+Creating a Heroku app: in cmd terminal:
+heroku create nameOfProject-django-todo --region eu
+
+to see the remotes i have (in this case 2) i input:
+git remote -v
+
+HEROKU ADDONS:
+to create a addon in heroku like a postgresql u type in the following:
+
+heroku addons:create heroku-postgresql:hobby-dev
+(level of subscription we want which is hobby-dev)
+
+CONNECTING TO OUR REMOTE DATABASE
+
+pip install dj_database_url
+
+the above package parses database URI's
+The URI is in the config vars under settings(heroku). 
+THEN: pip freeze --local > requirements.txt
+(the above to have a refresh of packages installed for this specific project)
+then:
+heroku config
+output: config vars variables
+then:
+python manage.py migrate
+(my migration should now be applied and there we go we've successfully connected
+to a Postgres database hosted on heroku
+through Django)
+
+You will also need to reference the package installation in the settings.py file
+
+IMPORTANT:
+
+I have thought something: i have written updates on each lesson on this module here. A simple solution would be, name of lesson and a URI link to the lesson. As an example:
+
+LESSON:  
+
+Connecting To Our Remote Database
+
+link: https://www.youtube.com/watch?time_continue=166&v=1Mk2cKFVeaY
+
+
+
+
+
+
+
+
+
+
+
+
+
+

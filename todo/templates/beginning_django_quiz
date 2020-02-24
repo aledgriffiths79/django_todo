@@ -17,6 +17,37 @@ ANSWER: forms.ModelForm
 5:  The python3 manage.py migrate command will
 ANSWER: use the migration files to apply changes to a database
 
+QUESTION: In order to test Django code, we need to use
+
+ANSWER : 
+Django's built-in testing framework correct
+
+QUESTION: 
+The python3 manage.py test command
+
+ANSWER:
+Checks all of the apps for filenames that begin with the word test and runs all of the methods in that file that begin with test_
+
+QUESTION:
+You should always aim to get 100% code coverage when writing tests
+
+ANSWER:
+FALSE
+
+QUESTION:
+Why is the requirements.txt file so important?
+ANSWER:
+The first thing Heroku does is try to install the dependencies (Django, etc.)
+
+QUESTION:
+What is the command that we use to display the apps associated with the logged in user?
+ANSWER:
+heroku appscorrect
+
+
+
+
+
 
 
 
