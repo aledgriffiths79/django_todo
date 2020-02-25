@@ -44,6 +44,17 @@ What is the command that we use to display the apps associated with the logged i
 ANSWER:
 heroku appscorrect
 
+QUESTION:
+What do we use to host our database?
+ANSWER:
+A heroku addon
+
+QUESTION:
+What is gunicorn?
+
+ANSWER:
+
+The server that will run our project correct
 
 
 
