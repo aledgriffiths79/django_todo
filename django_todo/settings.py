@@ -28,7 +28,7 @@ SECRET_KEY = 'baal!*-4w8^yc9s)8=kim(ry(obqauo7vs4)qn_cp1^y=-1u=_'
 DEBUG = True
 
 ALLOWED_HOSTS = [os.environ.get(),
-                 os.environ.get()]
+                 os.environ.get('HOSTNAME')]
 # ['127.0.0.1', 'aled-django-todo.herokuapp.com'] 
 
 
