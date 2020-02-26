@@ -29,7 +29,8 @@ DEBUG = True
 
 # ALLOWED_HOSTS = [os.environ.get(),
 #                  os.environ.get('HOSTNAME')]
-['127.0.0.1', 'aled-django-todo.herokuapp.com'] 
+
+ALLOWED_HOSTS = ['127.0.0.1', 'aled-django-todo.herokuapp.com'] 
 
 
 # Application definition
