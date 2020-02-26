@@ -113,3 +113,11 @@ The above is a less complex way of saying "python manage.py runserver"
 LINK:
 https://www.youtube.com/watch?time_continue=55&v=yjYYi_oxVjk
 
+LESSON:
+Automating Deployment Through GitHub
+
+LEARNT:
+      Environment variables are variables that we can set on the operating system level and read them from there instead of storing them in our repository 
+
+LINK:
+https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+F101+2017_T1/courseware/887cc80f69e84b029d6af66caab10352/5ed18ea19a18462b951d71790a4e3230/?child=first
