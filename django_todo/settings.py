@@ -45,8 +45,6 @@ DEBUG = development
 ALLOWED_HOSTS = [ os.environ.get('HOSTNAME'), '127.0.0.1']
 
 
-
-
 # Application definition
 
 INSTALLED_APPS = [
