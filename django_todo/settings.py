@@ -11,8 +11,15 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
-#  import dj_database_url and this will connect our application to our remote database 
+#  import dj_database_url and this will connect our application to our remote database
+
 import dj_database_url
+import env
+
+if os.environ.get('DEVELOPMENT'):
+    development = True
+else:
+    development = False
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -25,12 +32,19 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'baal!*-4w8^yc9s)8=kim(ry(obqauo7vs4)qn_cp1^y=-1u=_'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
 
-ALLOWED_HOSTS = [os.environ.get('aled-django-todo.herokuapp.com'), os.environ.get('HOSTNAME')]
+# we can set debug equal to development variable because if we are in the development mode then that's going to be true which means that we want debug mode on and if we're not in development mode then we want to turn the debug mode off so our users don't see our errors
 
-# ALLOWED_HOSTS = ['127.0.0.1',       
-#                  'aled-django-todo.herokuapp.com/'] 
+# if development:
+#     DEBUG = development
+# The above is the same syntax as the following:
+
+DEBUG = development
+
+# allowed_hosts below has 2 environments. 1 in vscode where u run it locally and 1 in heroku
+ALLOWED_HOSTS = [ os.environ.get('HOSTNAME'), '127.0.0.1']
+
+
 
 
 # Application definition
@@ -79,15 +93,20 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.sqlite3',
-#         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-#     }
-# }
+# use sqlite3 if we're in development and we want to read our variable from database URL if we're not in development
+
+if development:
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        }
+    }
 
 # DATABASE_URL is the variable name on heroku
-DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+else:
+    DATABASES = {'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))}
+
 # ('postgres://yzlbkestanmzum:9b3e50d78ef70e96920fdd1b05958ed660da5ef813bc93d68f4aa432564860aa@ec2-54-247-125-38.eu-west-1.compute.amazonaws.com:5432/denh0pjjkblsd0')}
 
 
