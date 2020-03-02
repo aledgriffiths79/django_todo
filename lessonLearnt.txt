@@ -121,3 +121,21 @@ LEARNT:
 
 LINK:
 https://courses.codeinstitute.net/courses/course-v1:CodeInstitute+F101+2017_T1/courseware/887cc80f69e84b029d6af66caab10352/5ed18ea19a18462b951d71790a4e3230/?child=first
+
+LESSON:
+ The SECRET_KEY
+
+LEARNT:
+in cmd temrinal: heroku config:set SECREY_KEY = 'secret code'
+
+2 secret keys for each environment, i,e, local and production.
+
+why? : Secret key is what's used for things like hashing passwords and stuff like that 
+
+LINK:
+https://www.youtube.com/watch?time_continue=94&v=c83Z7Ng5etw
+
+
+
+
+
