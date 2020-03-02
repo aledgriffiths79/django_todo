@@ -8,10 +8,3 @@ os.environ['DATABASE_URL'] = 'postgres://yzlbkestanmzum:9b3e50d78ef70e96920fdd1b
 
 os.environ['SECRET_KEY'] = 'g*no1_0zz^0r0x9x1*mw$u4@tydw@sd%b**42h)=l*g!)9ixs'
 
-# putting a random comment to see if its uploaded on my github repo
-
-
-
-
-
-
